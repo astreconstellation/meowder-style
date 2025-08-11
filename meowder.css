@@ -1,334 +1,93 @@
-/* Meowder CSS - Version Forumactif Optimisée */
-
-/* Reset spécifique pour éviter les conflits Forumactif */
-.meowder-container, .meowder-container * {
-    box-sizing: border-box !important;
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    margin: 0;
 }
-
-.meowder-container {
-    font-family: 'Inter', sans-serif !important;
-    perspective: 1000px !important;
-    display: flex !important;
-    justify-content: center !important;
-    padding: 20px !important;
-    margin: 0 !important;
-    background: none !important;
-    border: none !important;
-    width: 100% !important;
-    clear: both !important;
+.profile-card {
+    background: white;
+    width: 100%;
+    max-width: 350px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
 }
-
-.meowder-card {
-    background: rgba(255, 255, 255, 0.95) !important;
-    backdrop-filter: blur(20px) !important;
-    width: 100% !important;
-    max-width: 380px !important;
-    border-radius: 24px !important;
-    overflow: hidden !important;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important;
-    border: 1px solid rgba(255, 255, 255, 0.2) !important;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
-    position: relative !important;
-    margin: 0 auto !important;
-    float: none !important;
+.profile-header {
+    position: relative;
+    height: 250px;
+    background: linear-gradient(to right, rgba(255, 107, 107, 1), rgba(69, 183, 209, 1));
 }
-
-.meowder-card::before {
-    content: '' !important;
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    right: 0 !important;
-    bottom: 0 !important;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%) !important;
-    border-radius: 24px !important;
-    pointer-events: none !important;
+.profile-image {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-bottom: 2px solid white;
 }
-
-.meowder-card:hover {
-    transform: translateY(-10px) rotateX(5deg) !important;
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2) !important;
+.profile-bio {
+    padding: 10px;
+    text-align: center;
 }
-
-.meowder-image-container {
-    position: relative !important;
-    height: 300px !important;
-    overflow: hidden !important;
-    background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4) !important;
-    background-size: 400% 400% !important;
-    animation: meowderGradientShift 6s ease infinite !important;
-    margin: 0 !important;
-    padding: 0 !important;
+.profile-bio h1 {
+    margin: 0;
+    font-size: 20px;
+    color: #343a40;
 }
-
-@keyframes meowderGradientShift {
-    0% { background-position: 0% 50% !important; }
-    50% { background-position: 100% 50% !important; }
-    100% { background-position: 0% 50% !important; }
+.profile-bio span {
+    color: #6c757d;
+    margin: 5px 0;
+    display: block;
 }
-
-.meowder-image {
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: cover !important;
-    transition: transform 0.4s ease !important;
-    border: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    display: block !important;
+.profile-stats {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 10px;
+    border-top: 1px solid #eee;
+    background: #f8f9fa;
 }
-
-.meowder-card:hover .meowder-image {
-    transform: scale(1.05) !important;
+.profile-stats span {
+    color: #6c757d;
+    font-size: 10px;
 }
-
-.meowder-status {
-    position: absolute !important;
-    top: 16px !important;
-    right: 16px !important;
-    background: rgba(76, 175, 80, 0.9) !important;
-    color: white !important;
-    padding: 6px 12px !important;
-    border-radius: 20px !important;
-    font-size: 12px !important;
-    font-weight: 500 !important;
-    backdrop-filter: blur(10px) !important;
-    border: 1px solid rgba(255, 255, 255, 0.3) !important;
-    animation: meowderPulse 2s infinite !important;
-    margin: 0 !important;
-    z-index: 10 !important;
+.insta-post {
+    background: white;
+    width: 100%;
+    max-width: 350px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px auto 0;
 }
-
-@keyframes meowderPulse {
-    0%, 100% { opacity: 1 !important; }
-    50% { opacity: 0.7 !important; }
+.insta-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
 }
-
-.meowder-content {
-    padding: 24px !important;
-    position: relative !important;
-    background: transparent !important;
-    border: none !important;
-    margin: 0 !important;
+.insta-info {
+    padding: 10px;
+    text-align: center;
 }
-
-.meowder-name-section {
-    text-align: center !important;
-    margin-bottom: 20px !important;
-    padding: 0 !important;
-    border: none !important;
+.insta-info span {
+    color: #6c757d;
+    margin: 5px 0;
+    display: block;
 }
-
-.meowder-name {
-    font-size: 28px !important;
-    font-weight: 700 !important;
-    color: #2c3e50 !important;
-    margin: 0 0 8px 0 !important;
-    padding: 0 !important;
-    background: linear-gradient(135deg, #667eea, #764ba2) !important;
-    -webkit-background-clip: text !important;
-    -webkit-text-fill-color: transparent !important;
-    background-clip: text !important;
-    font-family: 'Inter', sans-serif !important;
-    line-height: 1.2 !important;
-    border: none !important;
+.insta-buttons {
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    border-top: 1px solid #eee;
 }
-
-.meowder-bio {
-    color: #7f8c8d !important;
-    font-size: 16px !important;
-    font-weight: 400 !important;
-    line-height: 1.4 !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    font-family: 'Inter', sans-serif !important;
-    border: none !important;
+.insta-buttons button {
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
 }
-
-.meowder-stats {
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important;
-    gap: 16px !important;
-    margin-bottom: 24px !important;
-    padding: 0 !important;
-    border: none !important;
-    background: transparent !important;
-}
-
-.meowder-stat {
-    background: rgba(102, 126, 234, 0.08) !important;
-    border-radius: 16px !important;
-    padding: 16px 8px !important;
-    text-align: center !important;
-    transition: all 0.3s ease !important;
-    border: 1px solid rgba(102, 126, 234, 0.1) !important;
-    margin: 0 !important;
-    float: none !important;
-    width: auto !important;
-}
-
-.meowder-stat:hover {
-    background: rgba(102, 126, 234, 0.12) !important;
-    transform: translateY(-2px) !important;
-}
-
-.meowder-stat-value {
-    font-size: 20px !important;
-    font-weight: 700 !important;
-    color: #667eea !important;
-    display: block !important;
-    margin-bottom: 4px !important;
-    padding: 0 !important;
-    font-family: 'Inter', sans-serif !important;
-    line-height: 1 !important;
-    border: none !important;
-}
-
-.meowder-stat-label {
-    font-size: 12px !important;
-    color: #95a5a6 !important;
-    font-weight: 500 !important;
-    text-transform: uppercase !important;
-    letter-spacing: 0.5px !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    font-family: 'Inter', sans-serif !important;
-    line-height: 1 !important;
-    border: none !important;
-}
-
-.meowder-interests {
-    display: flex !important;
-    flex-wrap: wrap !important;
-    gap: 8px !important;
-    margin-bottom: 24px !important;
-    padding: 0 !important;
-    border: none !important;
-    background: transparent !important;
-}
-
-.meowder-tag {
-    background: linear-gradient(135deg, #ff6b6b, #ee5a52) !important;
-    color: white !important;
-    padding: 8px 16px !important;
-    border-radius: 20px !important;
-    font-size: 13px !important;
-    font-weight: 500 !important;
-    transition: all 0.3s ease !important;
-    box-shadow: 0 4px 12px rgba(238, 90, 82, 0.3) !important;
-    margin: 0 !important;
-    border: none !important;
-    font-family: 'Inter', sans-serif !important;
-    line-height: 1 !important;
-    display: inline-block !important;
-}
-
-.meowder-tag:nth-child(even) {
-    background: linear-gradient(135deg, #4ecdc4, #44a08d) !important;
-    box-shadow: 0 4px 12px rgba(78, 205, 196, 0.3) !important;
-}
-
-.meowder-tag:nth-child(3n) {
-    background: linear-gradient(135deg, #45b7d1, #2196f3) !important;
-    box-shadow: 0 4px 12px rgba(69, 183, 209, 0.3) !important;
-}
-
-.meowder-tag:hover {
-    transform: translateY(-2px) !important;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2) !important;
-}
-
-.meowder-actions {
-    display: flex !important;
-    flex-direction: row !important;
-    justify-content: space-between !important;
-    align-items: stretch !important;
-    gap: 12px !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    border: none !important;
-    background: transparent !important;
-    width: 100% !important;
-}
-
-.meowder-btn {
-    padding: 14px 20px !important;
-    border: none !important;
-    border-radius: 16px !important;
-    font-weight: 600 !important;
-    font-size: 15px !important;
-    cursor: pointer !important;
-    transition: all 0.3s ease !important;
-    position: relative !important;
-    overflow: hidden !important;
-    text-decoration: none !important;
-    text-align: center !important;
-    display: block !important;
-    font-family: 'Inter', sans-serif !important;
-    line-height: 1.2 !important;
-    margin: 0 !important;
-    flex: 1 !important;
-    min-width: 0 !important;
-    white-space: nowrap !important;
-}
-
-.meowder-btn-primary {
-    background: linear-gradient(135deg, #667eea, #764ba2) !important;
-    color: white !important;
-    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4) !important;
-}
-
-.meowder-btn-secondary {
-    background: rgba(255, 255, 255, 0.8) !important;
-    color: #667eea !important;
-    border: 2px solid #667eea !important;
-    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.2) !important;
-}
-
-.meowder-btn:hover {
-    transform: translateY(-2px) !important;
-}
-
-.meowder-btn-primary:hover {
-    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.5) !important;
-}
-
-.meowder-btn-secondary:hover {
-    background: #667eea !important;
-    color: white !important;
-    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3) !important;
-}
-
-.meowder-logo {
-    position: absolute !important;
-    top: 16px !important;
-    left: 16px !important;
-    background: rgba(255, 255, 255, 0.9) !important;
-    backdrop-filter: blur(10px) !important;
-    padding: 8px 12px !important;
-    border-radius: 12px !important;
-    font-weight: 700 !important;
-    font-size: 14px !important;
-    color: #667eea !important;
-    border: 1px solid rgba(255, 255, 255, 0.3) !important;
-    margin: 0 !important;
-    z-index: 10 !important;
-    font-family: 'Inter', sans-serif !important;
-    line-height: 1 !important;
-}
-
-/* Responsive pour mobile */
-@media (max-width: 480px) {
-    .meowder-card {
-        max-width: 95% !important;
-        margin: 0 auto !important;
-    }
-    
-    .meowder-content {
-        padding: 20px !important;
-    }
-    
-    .meowder-name {
-        font-size: 24px !important;
-    }
-}
+.insta-buttons button:nth-child(2) { background: #ff9f43; }
+.insta-buttons button:nth-child(3) { background: #4dabf7; }
+.insta-buttons button:nth-child(4) { background: #6c757d; }
