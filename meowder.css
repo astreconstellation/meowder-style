@@ -1,265 +1,328 @@
-/* Meowder - CSS Externe pour Forumactif */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* Meowder CSS - Version Forumactif Optimisée */
+
+/* Reset spécifique pour éviter les conflits Forumactif */
+.meowder-container, .meowder-container * {
+    box-sizing: border-box !important;
 }
 
 .meowder-container {
-    font-family: 'Inter', sans-serif;
-    perspective: 1000px;
-    display: flex;
-    justify-content: center;
-    padding: 20px;
+    font-family: 'Inter', sans-serif !important;
+    perspective: 1000px !important;
+    display: flex !important;
+    justify-content: center !important;
+    padding: 20px !important;
+    margin: 0 !important;
+    background: none !important;
+    border: none !important;
+    width: 100% !important;
+    clear: both !important;
 }
 
 .meowder-card {
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(20px);
-    width: 100%;
-    max-width: 380px;
-    border-radius: 24px;
-    overflow: hidden;
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    position: relative;
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(20px) !important;
+    width: 100% !important;
+    max-width: 380px !important;
+    border-radius: 24px !important;
+    overflow: hidden !important;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+    position: relative !important;
+    margin: 0 auto !important;
+    float: none !important;
 }
 
 .meowder-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
-    border-radius: 24px;
-    pointer-events: none;
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%) !important;
+    border-radius: 24px !important;
+    pointer-events: none !important;
 }
 
 .meowder-card:hover {
-    transform: translateY(-10px) rotateX(5deg);
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
+    transform: translateY(-10px) rotateX(5deg) !important;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2) !important;
 }
 
 .meowder-image-container {
-    position: relative;
-    height: 300px;
-    overflow: hidden;
-    background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
-    background-size: 400% 400%;
-    animation: meowderGradientShift 6s ease infinite;
+    position: relative !important;
+    height: 300px !important;
+    overflow: hidden !important;
+    background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4) !important;
+    background-size: 400% 400% !important;
+    animation: meowderGradientShift 6s ease infinite !important;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 @keyframes meowderGradientShift {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% { background-position: 0% 50% !important; }
+    50% { background-position: 100% 50% !important; }
+    100% { background-position: 0% 50% !important; }
 }
 
 .meowder-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.4s ease;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    transition: transform 0.4s ease !important;
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
 }
 
 .meowder-card:hover .meowder-image {
-    transform: scale(1.05);
+    transform: scale(1.05) !important;
 }
 
 .meowder-status {
-    position: absolute;
-    top: 16px;
-    right: 16px;
-    background: rgba(76, 175, 80, 0.9);
-    color: white;
-    padding: 6px 12px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 500;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    animation: meowderPulse 2s infinite;
+    position: absolute !important;
+    top: 16px !important;
+    right: 16px !important;
+    background: rgba(76, 175, 80, 0.9) !important;
+    color: white !important;
+    padding: 6px 12px !important;
+    border-radius: 20px !important;
+    font-size: 12px !important;
+    font-weight: 500 !important;
+    backdrop-filter: blur(10px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    animation: meowderPulse 2s infinite !important;
+    margin: 0 !important;
+    z-index: 10 !important;
 }
 
 @keyframes meowderPulse {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0.7; }
+    0%, 100% { opacity: 1 !important; }
+    50% { opacity: 0.7 !important; }
 }
 
 .meowder-content {
-    padding: 24px;
-    position: relative;
+    padding: 24px !important;
+    position: relative !important;
+    background: transparent !important;
+    border: none !important;
+    margin: 0 !important;
 }
 
 .meowder-name-section {
-    text-align: center;
-    margin-bottom: 20px;
+    text-align: center !important;
+    margin-bottom: 20px !important;
+    padding: 0 !important;
+    border: none !important;
 }
 
 .meowder-name {
-    font-size: 28px;
-    font-weight: 700;
-    color: #2c3e50;
-    margin-bottom: 8px;
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    font-size: 28px !important;
+    font-weight: 700 !important;
+    color: #2c3e50 !important;
+    margin: 0 0 8px 0 !important;
+    padding: 0 !important;
+    background: linear-gradient(135deg, #667eea, #764ba2) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
+    font-family: 'Inter', sans-serif !important;
+    line-height: 1.2 !important;
+    border: none !important;
 }
 
 .meowder-bio {
-    color: #7f8c8d;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 1.4;
+    color: #7f8c8d !important;
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    line-height: 1.4 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-family: 'Inter', sans-serif !important;
+    border: none !important;
 }
 
 .meowder-stats {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
-    margin-bottom: 24px;
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 16px !important;
+    margin-bottom: 24px !important;
+    padding: 0 !important;
+    border: none !important;
+    background: transparent !important;
 }
 
 .meowder-stat {
-    background: rgba(102, 126, 234, 0.08);
-    border-radius: 16px;
-    padding: 16px 8px;
-    text-align: center;
-    transition: all 0.3s ease;
-    border: 1px solid rgba(102, 126, 234, 0.1);
+    background: rgba(102, 126, 234, 0.08) !important;
+    border-radius: 16px !important;
+    padding: 16px 8px !important;
+    text-align: center !important;
+    transition: all 0.3s ease !important;
+    border: 1px solid rgba(102, 126, 234, 0.1) !important;
+    margin: 0 !important;
+    float: none !important;
+    width: auto !important;
 }
 
 .meowder-stat:hover {
-    background: rgba(102, 126, 234, 0.12);
-    transform: translateY(-2px);
+    background: rgba(102, 126, 234, 0.12) !important;
+    transform: translateY(-2px) !important;
 }
 
 .meowder-stat-value {
-    font-size: 20px;
-    font-weight: 700;
-    color: #667eea;
-    display: block;
-    margin-bottom: 4px;
+    font-size: 20px !important;
+    font-weight: 700 !important;
+    color: #667eea !important;
+    display: block !important;
+    margin-bottom: 4px !important;
+    padding: 0 !important;
+    font-family: 'Inter', sans-serif !important;
+    line-height: 1 !important;
+    border: none !important;
 }
 
 .meowder-stat-label {
-    font-size: 12px;
-    color: #95a5a6;
-    font-weight: 500;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+    font-size: 12px !important;
+    color: #95a5a6 !important;
+    font-weight: 500 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    font-family: 'Inter', sans-serif !important;
+    line-height: 1 !important;
+    border: none !important;
 }
 
 .meowder-interests {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 24px;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 8px !important;
+    margin-bottom: 24px !important;
+    padding: 0 !important;
+    border: none !important;
+    background: transparent !important;
 }
 
 .meowder-tag {
-    background: linear-gradient(135deg, #ff6b6b, #ee5a52);
-    color: white;
-    padding: 8px 16px;
-    border-radius: 20px;
-    font-size: 13px;
-    font-weight: 500;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(238, 90, 82, 0.3);
+    background: linear-gradient(135deg, #ff6b6b, #ee5a52) !important;
+    color: white !important;
+    padding: 8px 16px !important;
+    border-radius: 20px !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 12px rgba(238, 90, 82, 0.3) !important;
+    margin: 0 !important;
+    border: none !important;
+    font-family: 'Inter', sans-serif !important;
+    line-height: 1 !important;
+    display: inline-block !important;
 }
 
 .meowder-tag:nth-child(even) {
-    background: linear-gradient(135deg, #4ecdc4, #44a08d);
-    box-shadow: 0 4px 12px rgba(78, 205, 196, 0.3);
+    background: linear-gradient(135deg, #4ecdc4, #44a08d) !important;
+    box-shadow: 0 4px 12px rgba(78, 205, 196, 0.3) !important;
 }
 
 .meowder-tag:nth-child(3n) {
-    background: linear-gradient(135deg, #45b7d1, #2196f3);
-    box-shadow: 0 4px 12px rgba(69, 183, 209, 0.3);
+    background: linear-gradient(135deg, #45b7d1, #2196f3) !important;
+    box-shadow: 0 4px 12px rgba(69, 183, 209, 0.3) !important;
 }
 
 .meowder-tag:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2) !important;
 }
 
 .meowder-actions {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 12px;
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 12px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    border: none !important;
+    background: transparent !important;
 }
 
 .meowder-btn {
-    padding: 14px 20px;
-    border: none;
-    border-radius: 16px;
-    font-weight: 600;
-    font-size: 15px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-    text-decoration: none;
-    text-align: center;
-    display: inline-block;
+    padding: 14px 20px !important;
+    border: none !important;
+    border-radius: 16px !important;
+    font-weight: 600 !important;
+    font-size: 15px !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    position: relative !important;
+    overflow: hidden !important;
+    text-decoration: none !important;
+    text-align: center !important;
+    display: inline-block !important;
+    font-family: 'Inter', sans-serif !important;
+    line-height: 1 !important;
+    margin: 0 !important;
 }
 
 .meowder-btn-primary {
-    background: linear-gradient(135deg, #667eea, #764ba2);
-    color: white;
-    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+    background: linear-gradient(135deg, #667eea, #764ba2) !important;
+    color: white !important;
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4) !important;
 }
 
 .meowder-btn-secondary {
-    background: rgba(255, 255, 255, 0.8);
-    color: #667eea;
-    border: 2px solid #667eea;
-    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.2);
+    background: rgba(255, 255, 255, 0.8) !important;
+    color: #667eea !important;
+    border: 2px solid #667eea !important;
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.2) !important;
 }
 
 .meowder-btn:hover {
-    transform: translateY(-2px);
+    transform: translateY(-2px) !important;
 }
 
 .meowder-btn-primary:hover {
-    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.5);
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.5) !important;
 }
 
 .meowder-btn-secondary:hover {
-    background: #667eea;
-    color: white;
-    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+    background: #667eea !important;
+    color: white !important;
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3) !important;
 }
 
 .meowder-logo {
-    position: absolute;
-    top: 16px;
-    left: 16px;
-    background: rgba(255, 255, 255, 0.9);
-    backdrop-filter: blur(10px);
-    padding: 8px 12px;
-    border-radius: 12px;
-    font-weight: 700;
-    font-size: 14px;
-    color: #667eea;
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    position: absolute !important;
+    top: 16px !important;
+    left: 16px !important;
+    background: rgba(255, 255, 255, 0.9) !important;
+    backdrop-filter: blur(10px) !important;
+    padding: 8px 12px !important;
+    border-radius: 12px !important;
+    font-weight: 700 !important;
+    font-size: 14px !important;
+    color: #667eea !important;
+    border: 1px solid rgba(255, 255, 255, 0.3) !important;
+    margin: 0 !important;
+    z-index: 10 !important;
+    font-family: 'Inter', sans-serif !important;
+    line-height: 1 !important;
 }
 
+/* Responsive pour mobile */
 @media (max-width: 480px) {
     .meowder-card {
-        max-width: 95%;
-        margin: 0 auto;
+        max-width: 95% !important;
+        margin: 0 auto !important;
     }
     
     .meowder-content {
-        padding: 20px;
+        padding: 20px !important;
     }
     
     .meowder-name {
-        font-size: 24px;
+        font-size: 24px !important;
     }
 }
